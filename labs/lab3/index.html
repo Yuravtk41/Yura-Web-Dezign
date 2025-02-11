@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student card FORM</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        fieldset {
+            border: 1px solid #000;
+            margin-bottom: 20px;
+            padding: 15px;
+        }
+        legend {
+            font-weight: bold;
+        }
+        label {
+            display: block;
+            margin-top: 10px;
+        }
+        input, select, textarea {
+            width: 100%;
+            padding: 5px;
+            margin-top: 5px;
+        }
+        input[type="radio"], input[type="checkbox"] {
+            width: auto;
+        }
+        footer {
+            margin-top: 20px;
+            text-align: center;
+            font-size: 14px;
+        }
+    </style>
+</head>
+<body>
+    <h2>Student card FORM</h2>
+    <form action="#" method="post">
+        
+        <fieldset>
+            <legend>Personal Information</legend>
+            <label>Full Name: <input type="text" name="full_name" placeholder="Enter your full name" required></label>
+            <label>Email: <input type="email" name="email" placeholder="Enter your email" required></label>
+            <label>Password: <input type="password" name="password" placeholder="Enter a password" required></label>
+            <label>Age: <input type="number" name="age" min="1" required></label>
+            <label>Date of Birth: <input type="date" name="dob" required></label>
+            
+            <label>Gender:</label>
+            <input type="radio" name="gender" value="male"> Male
+            <input type="radio" name="gender" value="female"> Female
+            <input type="radio" name="gender" value="other"> Other
+            
+            <label>Languages Known:</label>
+            <input type="checkbox" name="languages" value="english"> English
+            <input type="checkbox" name="languages" value="spanish"> Spanish
+            <input type="checkbox" name="languages" value="french"> French
+            
+            <label>Country:
+                <select name="country">
+                    <option>Select your country</option>
+                    <option value="usa">USA</option>
+                    <option value="uk">UK</option>
+                    <option value="canada">Canada</option>
+                    <option value="australia">Australia</option>
+                </select>
+            </label>
+        </fieldset>
+        
+        <fieldset>
+            <legend>College Subjects</legend>
+            <label>Choose subjects:
+                <select name="subjects" multiple>
+                    <option value="math">Mathematics</option>
+                    <option value="cs">Computer Science</option>
+                    <option value="physics">Physics</option>
+                    <option value="chemistry">Chemistry</option>
+                </select>
+            </label>
+            <label>Rate your interest in Computer Science: <input type="range" name="interest" min="1" max="10"></label>
+        </fieldset>
+        
+        <fieldset>
+            <legend>Skills Assessment</legend>
+            <label>Describe your skills:</label>
+            <textarea name="skills" rows="4" cols="30" placeholder="List your skills here..."></textarea>
+            <label>Upload your resume: <input type="file" name="resume"></label>
+            <label>Pick your favorite color: <input type="color" name="fav_color"></label>
+            <label>Preferred study time: <input type="time" name="study_time"></label>
+        </fieldset>
+        
+        <input type="submit" value="Submit Survey">
+    </form>
+    
+    <footer>
+        &copy; Student card by {your name}. All rights reserved.
+    </footer>
+</body>
+</html>
