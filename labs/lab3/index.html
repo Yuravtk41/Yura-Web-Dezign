@@ -34,11 +34,16 @@
             text-align: center;
             font-size: 14px;
         }
+        #imagePreview {
+            margin-top: 10px;
+            max-width: 100%;
+            height: auto;
+        }
     </style>
 </head>
 <body>
     <h2>Student card FORM</h2>
-    <form action="#" method="post">
+    <form action="#" method="post" enctype="multipart/form-data">
         
         <fieldset>
             <legend>Personal Information</legend>
@@ -86,7 +91,8 @@
             <legend>Skills Assessment</legend>
             <label>Describe your skills:</label>
             <textarea name="skills" rows="4" cols="30" placeholder="List your skills here..."></textarea>
-            <label>Upload your resume: <input type="file" name="resume"></label>
+            <label>Upload your resume: <input type="file" id="imageUpload" accept="image/*"></label>
+            <img id="imagePreview" src="#" alt="Image Preview" style="display:none;">
             <label>Pick your favorite color: <input type="color" name="fav_color"></label>
             <label>Preferred study time: <input type="time" name="study_time"></label>
         </fieldset>
@@ -97,5 +103,20 @@
     <footer>
         &copy; Student card by {your name}. All rights reserved.
     </footer>
+    
+    <script>
+        document.getElementById('imageUpload').addEventListener('change', function(event) {
+            const file = event.target.files[0];
+            if (file) {
+                const reader = new FileReader();
+                reader.onload = function(e) {
+                    const img = document.getElementById('imagePreview');
+                    img.src = e.target.result;
+                    img.style.display = 'block';
+                }
+                reader.readAsDataURL(file);
+            }
+        });
+    </script>
 </body>
 </html>
