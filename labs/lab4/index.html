@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IT Коледж Львівської Політехніки</title>
+    <style>
+        body {
+            text-align: center;
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            background: #0073e6;
+            color: white;
+            padding: 20px;
+            font-size: 1.5em;
+        }
+        button {
+            background-color: #007bff;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+
+        button:hover {
+        background-color: #0056b3;
+        }
+        main {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 20px;
+        }
+        section {
+            margin-bottom: 20px;
+            width: 80%;
+        }
+        img {
+            display: block;
+            margin: 0 auto;
+        }
+        video, iframe, audio {
+            display: block;
+            margin: 0 auto;
+        }
+        aside {
+            background: #f8f9fa;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            width: 80%;
+            margin: 20px auto;
+        }
+        aside h2 {
+            text-align: center;
+            color: #333;
+            font-size: 1.5em;
+            margin-bottom: 15px;
+        }
+        aside ul {
+            list-style: none;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        aside li {
+            margin-bottom: 15px;
+            background: white;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease;
+            width: 80%;
+        }
+        aside li:hover {
+            transform: scale(1.05);
+        }
+        aside a {
+            display: block;
+            text-decoration: none;
+            color: #333;
+            font-weight: bold;
+            text-align: center;
+            padding: 10px;
+        }
+        aside img {
+            width: 30%;
+            height: 500px;
+            display: block;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>IT коледж Львівської політехніки</h1>
+    </header>
+    
+    <main>
+        <section>
+            <img src="channels4_profile.jpg" alt="Логотип коледжу" height="300px">
+        </section>
+        
+        <section>
+            <button onclick="window.open('https://www.youtube.com/@itcollegelviv/featured', '_blank');">Підписатися</button>
+        </section>
+        
+        <section>
+            <h2>Навчальні відео</h2>
+            <video src="video1.mp4" width="80%" height="540px" controls></video>
+        </section>
+        
+        <section>
+            <h2>Аудіозапис</h2>
+            <audio src="videoplayback.m4a" controls></audio>
+        </section>
+        
+        <section>
+            <h2>YouTube Відео</h2>
+            <iframe width="80%" height="540px" src="https://www.youtube.com/embed/BlR_n5fSE8Q?si=J-Mr67dgM7zsaNs3" frameborder="0" allowfullscreen></iframe>
+        </section>
+        
+        <section>
+            <h2>Музеї та театри Львова</h2>
+            <iframe src="https://www.google.com/maps/d/embed?mid=1G4NGVMDO6tEz-kfPFGnLijLL1_r60zM&ehbc=2E312F" width="80%" height="540px"></iframe>
+        </section>
+    </main>
+    
+    <aside>
+        <h2>Спеціальності та освітні програми</h2>
+        <ul>
+            <li>
+                <a href="https://www.youtube.com/embed/382835RQ734" target="_blank">
+                    <img src="https://i.ytimg.com/vi/382835RQ734/oar2.jpg" alt="Вивчай спеціальність майбутнього">
+                    Вивчай спеціальність майбутнього
+                </a>
+            </li>
+            <li>
+                <a href="https://www.youtube.com/embed/tf-rbNaom5c" target="_blank">
+                    <img src="https://i.ytimg.com/vi/tf-rbNaom5c/oar2.jpg" alt="122 Комп’ютерні науки">
+                    122 Комп’ютерні науки. Computer Science
+                </a>
+            </li>
+            <li>
+                <a href="https://www.youtube.com/embed/9oaWLWo4yZ8" target="_blank">
+                    <img src="https://i.ytimg.com/vi/9oaWLWo4yZ8/oar2.jpg" alt="172 Телекомунікації та радіотехніка">
+                    172 Телекомунікації та радіотехніка
+                </a>
+            </li>
+            <li>
+                <a href="https://www.youtube.com/embed/5Drt8dK2GVE" target="_blank">
+                    <img src="https://i.ytimg.com/vi/5Drt8dK2GVE/oar2.jpg" alt="172 Телекомунікації – Інжиніринг">
+                    172 Телекомунікації – Інжиніринг
+                </a>
+            </li>
+            <li>
+                <a href="https://www.youtube.com/embed/BLQe-gK7rMs" target="_blank">
+                    <img src="https://i.ytimg.com/vi/BLQe-gK7rMs/oar2.jpg" alt="029 Інформаційна, бібліотечна та архівна справа">
+                    029 Інформаційна, бібліотечна та архівна справа
+                </a>
+            </li>
+        </ul>
+    </aside>
+</body>
+</html>
