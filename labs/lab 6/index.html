@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Новини світу</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+<header>
+    <h1>Новини світу</h1>
+</header>
+
+<nav>
+    <a href="#">Головна</a> | <a href="#">Політика</a> | <a href="#">Спорт</a> | <a href="#">Технології</a>
+</nav>
+
+<main>
+    <section class="content">
+        <article class="main-news">
+            <h2>Головна новина</h2>
+            <img src="main-news.jpg" alt="Зображення головної новини">
+            <p>Це головна новина, яка привертає увагу читачів. Тут можна розмістити детальний опис або інші важливі деталі цієї новини.</p>
+        </article>
+
+        <div class="news-grid">
+            <article>
+                <h2>Новина 2</h2>
+                <img src="news2.jpg" alt="Зображення новини 2">
+                <p>Короткий опис новини 2. Це може бути цікаве зображення або коротка інформація про подію.</p>
+            </article>
+            <article>
+                <h2>Новина 3</h2>
+                <img src="news2.jpg" alt="Зображення новини 3">
+                <p>Короткий опис новини 3. Це може бути цікаве зображення або коротка інформація про подію.</p>
+            </article>
+            <article>
+                <h2>Новина 4</h2>
+                <img src="news2.jpg" alt="Зображення новини 4">
+                <p>Короткий опис новини 4.</p>
+            </article>
+            <article>
+                <h2>Новина 5</h2>
+                <img src="news2.jpg" alt="Зображення новини 5">
+                <p>Короткий опис новини 5.</p>
+            </article>
+        </div>
+    </section>
+
+    <aside>
+        <div class="headline">
+            <p><strong>Заголовок новини 1</strong></p>
+            <p>01.01.2023</p>
+        </div>
+        <div class="headline">
+            <p><strong>Заголовок новини 2</strong></p>
+            <p>01.01.2023</p>
+        </div>
+        <div class="headline">
+            <p><strong>Заголовок новини 3</strong></p>
+            <p>01.01.2023</p>
+        </div>
+        <div class="headline">
+            <p><strong>Заголовок новини 4</strong></p>
+            <p>01.01.2023</p>
+        </div>
+    </aside>
+</main>
+
+<footer>
+    <p>&copy; 2023 Новини світу. Усі права захищені.</p>
+</footer>
+
+</body>
+</html>
+
+<style>
+    * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+    }
+    body {
+        font-family: Arial, sans-serif;
+        background-color: #f8f9fa;
+    }
+    header {
+        background-color: white;
+        text-align: center;
+        padding: 20px 0;
+        font-size: 24px;
+        font-weight: bold;
+        border-bottom: 2px solid #ddd;
+    }
+    nav {
+        text-align: center;
+        padding: 10px;
+        background-color: #e9ecef;
+    }
+    main {
+        display: flex;
+        width: 90%;
+        margin: 20px auto;
+        gap: 20px;
+    }
+    .content {
+        flex: 3;
+    }
+    .main-news {
+        background: white;
+        padding: 15px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        margin-bottom: 20px;
+    }
+    .main-news img {
+        width: 100%;
+        border-radius: 5px;
+    }
+    .news-grid {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+    }
+    .news-grid article {
+        background: white;
+        padding: 15px;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        border-radius: 5px;
+    }
+    .news-grid img {
+        width: 100%;
+        border-radius: 5px;
+    }
+    aside {
+        flex: 1;
+        background: white;
+        padding: 15px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+    .headline {
+        padding: 10px 0;
+        border-bottom: 1px solid #ddd;
+    }
+    .headline:last-child {
+        border-bottom: none;
+    }
+    footer {
+        text-align: center;
+        padding: 20px;
+        background: white;
+        margin-top: 20px;
+        border-top: 2px solid #ddd;
+    }
+</style>
+
