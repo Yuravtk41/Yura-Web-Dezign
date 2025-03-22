@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Новини</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f8f9fa;
+        }
+
+        header, footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 15px;
+        }
+
+        nav {
+            background-color: black;
+            text-align: center;
+            padding: 10px;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin: 0 15px;
+        }
+
+        .container {
+            display: grid;
+            grid-template-columns: 3fr 1fr;
+            gap: 20px;
+            padding: 20px;
+        }
+
+        .news-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 20px;
+        }
+
+        .news-item {
+            background-color: white;
+            padding: 15px;
+            border: 1px solid #ccc;
+            text-align: center;
+            box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        .news-item img {
+            width: 150px;
+            height: 150px;
+            background: gray;
+            display: block;
+            margin: 0 auto 10px;
+        }
+
+        .news-item a {
+            font-size: 1.2em;
+            color: blue;
+            text-decoration: none;
+        }
+
+        .sidebar {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+
+        .ad {
+            background: yellow;
+            text-align: center;
+            padding: 80px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <header>Сторінка новин</header>
+    <nav>
+        <a href="#">Головна</a>
+        <a href="#">Новини</a>
+        <a href="#">Про нас</a>
+        <a href="#">Контакти</a>
+    </nav>
+    <div class="container">
+        <section class="news-grid">
+            <article class="news-item">
+                <img src="placeholder.jpg" alt="Новина">
+                <a href="#">Заголовок новини 1</a>
+                <p>Дата публікації: 2024-11-01</p>
+                <p>Лід тексту: Lorem ipsum dolor sit amet...</p>
+            </article>
+            <article class="news-item">
+                <img src="placeholder.jpg" alt="Новина">
+                <a href="#">Заголовок новини 2</a>
+                <p>Дата публікації: 2024-11-02</p>
+                <p>Лід тексту: Lorem ipsum dolor sit amet...</p>
+            </article>
+            <article class="news-item">
+                <img src="placeholder.jpg" alt="Новина">
+                <a href="#">Заголовок новини 3</a>
+                <p>Дата публікації: 2024-11-03</p>
+                <p>Лід тексту: Lorem ipsum dolor sit amet...</p>
+            </article>
+            <article class="news-item">
+                <img src="placeholder.jpg" alt="Новина">
+                <a href="#">Заголовок новини 4</a>
+                <p>Дата публікації: 2024-11-04</p>
+                <p>Лід тексту: Lorem ipsum dolor sit amet...</p>
+            </article>
+            <article class="news-item">
+                <img src="placeholder.jpg" alt="Новина">
+                <a href="#">Заголовок новини 5</a>
+                <p>Дата публікації: 2024-11-05</p>
+                <p>Лід тексту: Lorem ipsum dolor sit amet...</p>
+            </article>
+            <article class="news-item">
+                <img src="placeholder.jpg" alt="Новина">
+                <a href="#">Заголовок новини 6</a>
+                <p>Дата публікації: 2024-11-06</p>
+                <p>Лід тексту: Lorem ipsum dolor sit amet...</p>
+            </article>
+        </section>
+        <aside class="sidebar">
+            <div class="ad">Реклама</div>
+            <div class="ad">Реклама</div>
+            <div class="ad">Реклама</div>
+        </aside>
+    </div>
+    <footer>© 2025 Новини. Всі права захищені.</footer>
+</body>
+</html>
