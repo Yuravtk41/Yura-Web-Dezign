@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lab13 - Особливості ініціалізації змінних Javascript</title>
+  <style>
+    body {
+      text-align: center;
+      font-family: Arial, sans-serif;
+    }
+    pre {
+      display: inline-block;
+      text-align: left;
+      background: #f4f4f4;
+      padding: 10px;
+      border-radius: 5px;
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <h1>Лабораторна робота: Особливості ініціалізації змінних Javascript</h1>
+</header>
+
+<section>
+  <h2>Завдання 1: Передбачити результат виконання коду</h2>
+  <pre>
+    console.log(a) // ? undefined, бо var піднятий, а значення ще ні
+    var a = 10
+
+    console.log(b) // ? Помилка, let піднявся, та ініціалізації нема
+    let b = 20
+
+    console.log(c) // ? Помилка, const піднятий, але не ініціалізований
+    const c = 30
+  </pre>
+</section>
+
+<section>
+  <h2>Завдання 2: Доступність змінних після if-блоку</h2>
+  <pre>
+    function testScope() {
+      if (true) {
+        var x = 5
+        let y = 10
+        const z = 15
+      }
+      console.log(x) // ? 5, бо var глобальний у межах функції
+      console.log(y) // ? Помилка, бо let має блочну область
+      console.log(z) // ? Помилка, бо const теж має блочну область
+    }
+    testScope()
+  </pre>
+</section>
+
+<section>
+  <h2>Завдання 3: Передбачити результати операцій</h2>
+  <pre>
+    console.log(5 + "5")  // ? "55", бо рядок має вищий пріоритет
+    console.log("5" - 2)  // ? 3, бо "5" став числом і відняли два
+    console.log(true + false)  // ? 1, бо true це один, false це нуль
+    console.log(null + 1)  // ? 1, бо null це теж, як не дивно, нуль
+    console.log(undefined + 1)  // ? NaN, бо undefined в число не йде
+    console.log(0 == false)  // ? true, бо 0 і false як рівні стають
+    console.log(0 === false) // ? false, бо типи між ними різняться
+  </pre>
+</section>
+
+<section>
+  <h2>Завдання 4: Object.freeze()</h2>
+  <pre>
+    const person = {
+      name: "John"
+      age: 30
+    }
+
+    person.age = 31  // ✅ Зміниться, бо об'єкт ще не заморожений
+    person.city = "New York"  // ✅ Додасться, бо об'єкт відкритий
+
+    console.log(person)  // { name: "John", age: 31, city: "New York" }
+
+    person = { name: "Alice", age: 25 }  // ❌ Помилка, бо const не дає змінити об'єкт
+    Object.freeze(person)  // 🔒 Заморозимо, щоб змін не було
+
+    person.age = 40  // ❌ Не зміниться, бо тепер він заморожений
+    person.city = "Paris"  // ❌ Не додасться, бо він під охороною
+
+    console.log(person)  // { name: "John", age: 31, city: "New York" }
+  </pre>
+</section>
+
+<section>
+  <h2>Завдання 5: Реалізація функції checkType</h2>
+  <pre>
+    function checkType(value) {
+      return typeof value
+    }
+
+    console.log(checkType(10))  // "number", бо число передали ми
+    console.log(checkType("Hello"))  // "string", бо текст тут як є
+    console.log(checkType(null))  // "object", хоч null це не таке
+    console.log(checkType(undefined))  // "undefined", як є так і є
+    console.log(checkType({}))  // "object", бо об'єкт, нема що казати
+    console.log(checkType([]))  // "object", масив, та все ж об'єкт
+    console.log(checkType(() => {}))  // "function", бо функція це
+    console.log(checkType(true))  // "boolean", бо тут тільки true
+  </pre>
+</section>
+
+<script src="js/main.js"></script>
+
+</body>
+</html>
+

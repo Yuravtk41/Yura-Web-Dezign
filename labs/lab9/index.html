@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Львівська Політехніка</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: Arial, sans-serif;
+        }
+        .header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 10px 20px;
+            background-color: #f8f9fa;
+        }
+        .logo {
+            display: flex;
+            align-items: center;
+        }
+        .logo img {
+            width: 80px;
+            height: 80px;
+            margin-right: 10px;
+        }
+        .language-switch {
+            display: flex;
+            align-items: center;
+        }
+        .language-switch a {
+            margin: 0 5px;
+            text-decoration: none;
+            color: #007bff;
+        }
+        .search-box {
+            display: flex;
+            align-items: center;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            overflow: hidden;
+        }
+        .search-box input {
+            border: none;
+            padding: 5px;
+            outline: none;
+        }
+        .search-box button {
+            background: #007bff;
+            border: none;
+            padding: 5px 10px;
+            cursor: pointer;
+            color: white;
+        }
+        .menu {
+            display: flex;
+            justify-content: center;
+            background-color: #e9ecef;
+            padding: 10px;
+        }
+        .menu a {
+            text-decoration: none;
+            color: black;
+            margin: 0 10px;
+        }
+        .container {
+            padding: 20px;
+        }
+        .header-image {
+            width: 100%;
+            height: auto;
+        }
+        .header-text {
+            text-align: center;
+            margin-top: 20px;
+        }
+        .nav-button {
+            background-color: #007bff;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            margin: 5px;
+            cursor: pointer;
+        }
+        .footer {
+            display: flex;
+            justify-content: space-around;
+            background-color: #e9ecef;
+            padding: 20px;
+            margin-top: 20px;
+        }
+        .footer-column {
+            flex: 1;
+            margin: 0 10px;
+        }
+        .footer-column h3 {
+            font-size: 18px;
+            margin-bottom: 10px;
+            color: #007bff;
+        }
+        .footer-column ul {
+            list-style: none;
+        }
+        .footer-column ul li {
+            margin-bottom: 8px;
+        }
+        .footer-column ul li a {
+            text-decoration: none;
+            color: black;
+        }
+        .footer-column ul li a:hover {
+            color: #007bff;
+        }
+    </style>
+</head>
+<body>
+    <header class="header">
+        <div class="logo">
+            <img src="Screenshot_7.png" alt="Логотип">
+            <h1>НАЦІОНАЛЬНИЙ УНІВЕРСИТЕТ «ЛЬВІВСЬКА ПОЛІТЕХНІКА»</h1>
+        </div>
+        <div class="language-switch">
+            <span><strong>UK</strong></span>
+            <a href="#">EN</a>
+            <a href="#">DE</a>
+            <a href="#">ES</a>
+            <a href="#">FR</a>
+            <a href="#">IT</a>
+            <a href="#">PL</a>
+            <a href="#">中文</a>
+        </div>
+        <div class="search-box">
+            <input type="text" placeholder="Search">
+            <button>🔍</button>
+        </div>
+    </header>
+    <nav class="menu">
+        <a href="#">Політехніка</a>
+        <a href="#">Інститути</a>
+        <a href="#">Освіта</a>
+        <a href="#">Наука</a>
+        <a href="#">Проекти</a>
+        <a href="#">Вступнику</a>
+        <a href="#">Студенту</a>
+        <a href="#">Працівнику</a>
+        <a href="#">Випускнику</a>
+    </nav>
+    <div class="container">
+        <header>
+            <img src="privit-rektora1600650.jpg" alt="Група студентів" class="header-image">
+            <div class="header-text">
+                <h1>Юрій Бобало: «Свято, яке об’єднує студентів, викладачів і всіх, хто творить це унікальне місце»</h1>
+            </div>
+        </header>
+        <nav>
+            <button class="nav-button">Вибори ректора</button>
+            <button class="nav-button">Політехніки для перемоги</button>
+            <button class="nav-button">Книга пам’яті</button>
+            <button class="nav-button">Аналітний статті</button>
+        </nav>
+    </div>
+    <footer class="footer">
+        <div class="footer-column">
+            <h3>Новини 1</h3>
+            <ul>
+                <li><a href="#">Важливість візуальних засобів у комунікації</a></li>
+                <li><a href="#">Як студенту-журналісту долучитися до Kordon Race</a></li>
+                <li><a href="#">Міжнародна конференція «Європейська інтеграція»</a></li>
+            </ul>
+        </div>
+        <div class="footer-column">
+            <h3>Новини 2</h3>
+            <ul>
+                <li><a href="#">«Політехніка підтримка» повертається</a></li>
+                <li><a href="#">Сталий розвиток як виклик</a></li>
+                <li><a href="#">Мікро- та нанофлюїдика</a></li>
+            </ul>
+        </div>
+        <div class="footer-column">
+            <h3>Новини 3</h3>
+            <ul>
+                <li><a href="#">63-й фестиваль «Весна Політехніки»</a></li>
+                <li><a href="#">Львівську політехніку відібрано для участі</a></li>
+                <li><a href="#">Студентка ІАРД Анастасія Леськів</a></li>
+            </ul>
+        </div>
+    </footer>
+</body>
+</html>
